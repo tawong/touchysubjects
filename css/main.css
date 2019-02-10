@@ -148,6 +148,9 @@ img.bg-deco {
     font-size: 14px;
     letter-spacing: 0.05rem;
     z-index: 99; }
+    #splash #enter:hover {
+      color: white;
+      background: #064ff5; }
   #splash #dots {
     position: absolute;
     bottom: 88px;
