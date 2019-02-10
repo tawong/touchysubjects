@@ -73,6 +73,11 @@ body {
       width: 70%;
       margin: auto;
       text-align: left; }
+      #app #results #report-stream p.sub {
+        color: #064ff5;
+        font-weight: 600;
+        margin-top: 0;
+        margin-bottom: 40px; }
       #app #results #report-stream .report-head {
         height: auto;
         width: 100%;
@@ -102,4 +107,5 @@ body {
     #app #results h1 {
       color: #064ff5;
       font-size: 5vw;
-      text-align: left; }
+      text-align: left;
+      margin-bottom: 15px; }
