@@ -4,17 +4,6 @@ body {
   background: #f4f3f2;
   overflow-x: hidden; }
 
-html::-webkit-scrollbar-track {
-  background-color: #f45755; }
-
-html::-webkit-scrollbar {
-  width: 8px;
-  background-color: transparent; }
-
-html::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #d2d2d2; }
-
 img.bg-deco {
   position: absolute;
   max-width: 220px;

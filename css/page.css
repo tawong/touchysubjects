@@ -1,5 +1,9 @@
-html, body {
+html,
+body {
   background: #f4f3f2; }
+
+body {
+  overflow-x: hidden; }
 
 .theme-button {
   border: 3px solid #064ff5;
@@ -49,3 +53,149 @@ html, body {
     @media (max-width: 550px) {
       #quiz-start button {
         width: 40%; } }
+
+#about {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  overflow-x: hidden; }
+  #about img#logo {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px; }
+  #about p {
+    width: 50%;
+    margin: auto;
+    color: black;
+    font-weight: 600;
+    line-height: 28px;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 75px; }
+    #about p#intro {
+      width: 75%;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 75px; }
+  #about a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid #d6f440; }
+  #about h1 {
+    width: 50%;
+    margin: auto;
+    color: #064ff5;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: left; }
+    @media (max-width: 550px) {
+      #about h1 {
+        font-size: 45px; } }
+  #about .operate {
+    width: 60%;
+    margin-left: 30%; }
+  #about #penis,
+  #about #toy {
+    position: absolute;
+    z-index: 99; }
+  #about #penis {
+    max-width: 250px;
+    top: 55%;
+    left: -5%; }
+  #about #toy {
+    max-width: 180px;
+    top: 85%;
+    right: -5%; }
+
+#penis {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  overflow-x: hidden;
+  z-index: 99; }
+  #penis p,
+  #penis li {
+    width: 50%;
+    margin: auto;
+    color: black;
+    font-weight: 600;
+    line-height: 28px;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 20px; }
+    #penis p.intro,
+    #penis li.intro {
+      width: 50%;
+      margin: auto;
+      text-align: left;
+      margin-bottom: 75px; }
+    #penis p.end,
+    #penis li.end {
+      margin-bottom: 75px; }
+    #penis p.sub-nav,
+    #penis li.sub-nav {
+      color: #064ff5;
+      font-size: 20px;
+      margin-bottom: 8px; }
+      #penis p.sub-nav a,
+      #penis li.sub-nav a {
+        color: #064ff5; }
+      #penis p.sub-nav.end,
+      #penis li.sub-nav.end {
+        margin-bottom: 75px; }
+  #penis a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid #d6f440; }
+  #penis h1,
+  #penis h2,
+  #penis h3 {
+    width: 50%;
+    margin: auto;
+    color: #064ff5;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: left; }
+    @media (max-width: 550px) {
+      #penis h1,
+      #penis h2,
+      #penis h3 {
+        font-size: 45px; } }
+  #penis h2 {
+    font-size: 32px; }
+  #penis h3 {
+    font-size: 26px; }
+
+.bg-deco {
+  position: absolute;
+  max-width: 250px;
+  z-index: 99; }
+  .bg-deco#thepenis {
+    right: 10%;
+    top: 8%; }
+  .bg-deco#ruler {
+    top: 75%;
+    left: -6%; }
+  .bg-deco#tape {
+    top: 125%;
+    right: -3%; }
+  .bg-deco#razor {
+    top: 230%;
+    right: -2%; }
+  .bg-deco#towel {
+    top: 280%;
+    left: 0; }
+  .bg-deco#penis1 {
+    top: 380%;
+    right: -2%; }
+  .bg-deco#penis2 {
+    top: 425%;
+    left: 0px; }
+
+#footer {
+  width: 100vw; }
