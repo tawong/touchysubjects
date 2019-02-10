@@ -55,6 +55,7 @@ body {
         width: 40%; } }
 
 #about {
+  position: relative;
   width: 80%;
   margin: auto;
   margin-top: 50px;
@@ -64,6 +65,9 @@ body {
     width: 100%;
     max-width: 350px;
     margin-bottom: 20px; }
+    @media (max-width: 550px) {
+      #about img#logo {
+        width: 70%; } }
   #about p {
     width: 50%;
     margin: auto;
@@ -73,11 +77,21 @@ body {
     font-size: 14px;
     text-align: left;
     margin-bottom: 75px; }
+    @media (max-width: 550px) {
+      #about p {
+        width: 90%;
+        margin: auto; } }
     #about p#intro {
       width: 75%;
       margin: auto;
       text-align: center;
       margin-bottom: 75px; }
+      @media (max-width: 550px) {
+        #about p#intro {
+          width: 90%;
+          margin: auto;
+          margin-bottom: 25px;
+          text-align: left; } }
   #about a {
     text-decoration: none;
     color: black;
@@ -92,22 +106,15 @@ body {
     text-align: left; }
     @media (max-width: 550px) {
       #about h1 {
-        font-size: 45px; } }
+        font-size: 45px;
+        width: 90%; } }
   #about .operate {
     width: 60%;
     margin-left: 30%; }
-  #about #penis,
-  #about #toy {
-    position: absolute;
-    z-index: 99; }
-  #about #penis {
-    max-width: 250px;
-    top: 55%;
-    left: -5%; }
-  #about #toy {
-    max-width: 180px;
-    top: 85%;
-    right: -5%; }
+    @media (max-width: 550px) {
+      #about .operate {
+        width: 90%;
+        margin: auto; } }
 
 #penis {
   position: relative;
@@ -127,12 +134,20 @@ body {
     font-size: 14px;
     text-align: left;
     margin-bottom: 20px; }
+    @media (max-width: 550px) {
+      #penis p,
+      #penis li {
+        width: 95%; } }
     #penis p.intro,
     #penis li.intro {
       width: 50%;
       margin: auto;
       text-align: left;
       margin-bottom: 75px; }
+      @media (max-width: 550px) {
+        #penis p.intro,
+        #penis li.intro {
+          width: 95%; } }
     #penis p.end,
     #penis li.end {
       margin-bottom: 75px; }
@@ -147,6 +162,10 @@ body {
       #penis p.sub-nav.end,
       #penis li.sub-nav.end {
         margin-bottom: 75px; }
+        @media (max-width: 550px) {
+          #penis p.sub-nav.end,
+          #penis li.sub-nav.end {
+            margin-bottom: 30px; } }
   #penis a {
     text-decoration: none;
     color: black;
@@ -165,7 +184,8 @@ body {
       #penis h1,
       #penis h2,
       #penis h3 {
-        font-size: 45px; } }
+        font-size: 45px;
+        width: 95%; } }
   #penis h2 {
     font-size: 32px; }
   #penis h3 {
@@ -175,6 +195,17 @@ body {
   position: absolute;
   max-width: 250px;
   z-index: 99; }
+  @media (max-width: 550px) {
+    .bg-deco {
+      opacity: 0.2; } }
+  .bg-deco#normpenis {
+    max-width: 250px;
+    top: 55%;
+    left: -5%; }
+  .bg-deco#toy {
+    max-width: 180px;
+    top: 85%;
+    right: -5%; }
   .bg-deco#thepenis {
     right: 10%;
     top: 8%; }

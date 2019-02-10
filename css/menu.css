@@ -24,7 +24,7 @@ nav {
   -webkit-transform: rotate(-90deg) translateX(-100%);
   -ms-transform: rotate(-90deg) translateX(-100%);
   transform: rotate(-90deg) translateX(-100%);
-  z-index: 99; }
+  z-index: 100; }
   nav ul {
     list-style: none;
     width: 100%;
@@ -68,7 +68,7 @@ nav {
   top: 20px;
   right: 0;
   padding: 20px;
-  z-index: 99; }
+  z-index: 100; }
   #corner-menu ul {
     list-style: none;
     text-align: right;
@@ -85,6 +85,8 @@ nav {
       #corner-menu ul div.hidden a {
         font-size: 12px;
         cursor: pointer; }
+        #corner-menu ul div.hidden a.disabled {
+          color: #888; }
         #corner-menu ul div.hidden a li {
           text-transform: lowercase;
           line-height: 20px; }
