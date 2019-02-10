@@ -4,6 +4,17 @@ body {
   background: #f4f3f2;
   overflow-x: hidden; }
 
+html::-webkit-scrollbar-track {
+  background-color: #f25553; }
+
+html::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent; }
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #888; }
+
 nav {
   position: absolute;
   top: 0;
@@ -50,35 +61,6 @@ nav {
           transition: width .3s; }
         nav ul a li:hover::after {
           width: 100%; }
-
-#splash {
-  width: 100vw;
-  height: 100vw; }
-  #splash .box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 65%;
-    height: 65%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    border: 3px solid #a7362d;
-    text-align: center; }
-    #splash .box h1 {
-      margin: 0;
-      position: absolute;
-      width: 100vw;
-      -webkit-transform: translateX(-18%);
-      -ms-transform: translateX(-18%);
-      transform: translateX(-18%);
-      top: 0%;
-      font-size: 80px;
-      color: #064ff5; }
-      #splash .box h1:nth-child(2) {
-        top: 33%; }
-      #splash .box h1:nth-child(3) {
-        top: 66%; }
 
 img.bg-deco {
   position: absolute;
@@ -137,7 +119,7 @@ img.bg-deco {
   text-align: center; }
   #splash #enter {
     position: absolute;
-    bottom: 100px;
+    bottom: 8%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -153,7 +135,7 @@ img.bg-deco {
       background: #064ff5; }
   #splash #dots {
     position: absolute;
-    bottom: 88px;
+    bottom: 6%;
     -webkit-transform: translateX(-45%);
     -ms-transform: translateX(-45%);
     transform: translateX(-45%);
@@ -174,7 +156,25 @@ img.bg-deco {
 #content {
   background: #064ff5;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  padding-top: 65px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  #content p {
+    width: 80%;
+    max-width: 630px;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0.05em; }
+    #content p span {
+      background: #d6f440;
+      padding: 2px;
+      color: #064ff5;
+      letter-spacing: 0.05em; }
 
 @-webkit-keyframes float {
   0% {
