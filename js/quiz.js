@@ -106,7 +106,8 @@ var vm = new Vue({
                         option: choices[pathID][1].choice,
                         link: choices[pathID][1].score
                 }
-            ]
+            ];
+            vm.prompt = questions[pathID];
 
             }, 400);
 
