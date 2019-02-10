@@ -21,6 +21,12 @@ body {
     -webkit-transition: opacity 0.4s;
     -o-transition: opacity 0.4s;
     transition: opacity 0.4s; }
+    @media (max-width: 550px) {
+      #app #prompt {
+        width: 90%;
+        margin-top: 50px;
+        font-size: 22px;
+        line-height: 33px; } }
   #app #progress {
     color: #d6f440; }
   #app #choice-container {
@@ -46,6 +52,12 @@ body {
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s; }
+    @media (max-width: 550px) {
+      #app .choice {
+        width: 90%;
+        font-size: 14px;
+        padding: 12px 3px;
+        padding-left: 15px; } }
     #app .choice:hover {
       background: #f45755; }
     #app .choice p {
@@ -65,7 +77,8 @@ body {
       #app #results #report-stream .report-head {
         height: 60px;
         width: 100%;
-        background: #064ff5; }
+        background: #064ff5;
+        cursor: pointer; }
         #app #results #report-stream .report-head p {
           background: #064ff5;
           line-height: 60px;
@@ -76,7 +89,8 @@ body {
       #app #results #report-stream .report-body {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
-        padding: 20px; }
+        padding: 20px;
+        display: none; }
         #app #results #report-stream .report-body p, #app #results #report-stream .report-body li {
           font-size: 14px;
           font-weight: 700;

@@ -18,22 +18,34 @@ html, body {
   margin: auto;
   background-image: url(../img/quiz-icon.png);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: bottom right;
   background-size: 25vw; }
+  @media (max-width: 550px) {
+    #quiz-start {
+      width: 75%; } }
   #quiz-start h1 {
     color: #064ff5;
     font-size: 80px;
     font-weight: 700;
     margin-bottom: 25px; }
+    @media (max-width: 550px) {
+      #quiz-start h1 {
+        font-size: 45px; } }
   #quiz-start p {
     width: 70%;
     color: black;
     font-weight: 600;
     line-height: 28px;
     margin-bottom: 30px; }
+    @media (max-width: 550px) {
+      #quiz-start p {
+        width: 100%; } }
   #quiz-start button {
     background: white;
     width: 20%;
     padding: 16px 15px;
     margin-right: 8%;
     font-weight: 600; }
+    @media (max-width: 550px) {
+      #quiz-start button {
+        width: 40%; } }
