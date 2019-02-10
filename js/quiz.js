@@ -10,11 +10,6 @@ Vue.component('choice-head', {
     template: `<div class="choice" v-on:click="$emit('update-path')">{{choice}}</div>`
 })
 
-Vue.component('feedback', {
-    props: ['status'],
-    template: `<div id="feedbackitem" class="feedback"><slot></slot></div>`
-})
-
 Vue.component('choice-body', {
     props: ['choice', 'link', 'status', 'image', 'ivideo'],
 
@@ -31,6 +26,7 @@ var vm = new Vue({
     el: "#app",
     data: {
         prompt: questions[1],
+        progress: pathID,
         feedbackStatus: "",
         globalurl: 0,
         vidSrc: "startVid",
@@ -56,19 +52,7 @@ var vm = new Vue({
             {
                 option: choices[pathID][1].choice,
                 link: choices[pathID][1].score,
-            }
-//            ,
-//            {
-//                option: choices[pathID][2].choice,
-//                link: choices[pathID][2].score,
-//            }
-//            },
-//            {
-//                option: pathAnswers[pathID][2].choice,
-//                link: pathAnswers[pathID][2].link,
-//                status: pathAnswers[pathID][2].status
-//            }
-        ]
+            }]
     },
     methods: {
         updateMe: function (data) {
@@ -79,56 +63,90 @@ var vm = new Vue({
             var url = data[0];
             var status = "status";
             var videodata = "videodata";
-            
+
+            var promptEl = document.getElementById("prompt");
+
+            $(".choice").css("opacity", 0);
+            promptEl.style.opacity = 0;
+
+            if (url != 0) {
+
+                $("#report-stream").append("<div class='report-box'><div class='report-head'>" + postAnswers[pathID][url].reportHead + "</div><div class='report-body'>" + postAnswers[pathID][url].reportBody + "</div></div>");
+            }
+            console.log(postAnswers[pathID][url].reportBody);
             pathID++;
-
-//            console.log(url + status + videodata)
-
-//
-//            console.log("update called <" + url + status + ">");
 
             //DEBUG
             console.log("url: " + url);
-//            console.log("status: " + status);
-//            console.log("video: " + videodata);
 
+            if (pathID < 10) {
+                vm.progress = pathID;
 
+                window.setTimeout(function () {
 
-            //Update choices for next question while video is playing in the front
-            window.setTimeout(function () {
-
-            vm.choiceList2 = [
-                {
-                        option: choices[pathID][0].choice,
-                        link: choices[pathID][0].score
+                    if (pathID == 2 || pathID == 4 || pathID == 5) {
+                        vm.choiceList2 = [
+                            {
+                                option: choices[pathID][0].choice,
+                                link: choices[pathID][0].score
                 },
-                {
-                        option: choices[pathID][1].choice,
-                        link: choices[pathID][1].score
-                }
-            ];
-            vm.prompt = questions[pathID];
+                            {
+                                option: choices[pathID][1].choice,
+                                link: choices[pathID][1].score
+                },
+                            {
+                                option: choices[pathID][2].choice,
+                                link: choices[pathID][2].score
+                }];
 
-            }, 400);
+                    } else if (pathID == 6) {
+                        vm.choiceList2 = [
+                            {
+                                option: choices[pathID][0].choice,
+                                link: choices[pathID][0].score
+                },
+                            {
+                                option: choices[pathID][1].choice,
+                                link: choices[pathID][1].score
+                },
+                            {
+                                option: choices[pathID][2].choice,
+                                link: choices[pathID][2].score
+                },
+                            {
+                                option: choices[pathID][3].choice,
+                                link: choices[pathID][3].score
+                }];
+
+                    } else {
+                        vm.choiceList2 = [
+                            {
+                                option: choices[pathID][0].choice,
+                                link: choices[pathID][0].score
+                },
+                            {
+                                option: choices[pathID][1].choice,
+                                link: choices[pathID][1].score
+                }];
+                    }
 
 
+                    vm.prompt = questions[pathID];
 
 
+                    window.setTimeout(function () {
+                        $(".choice").css("opacity", 1);
+                        promptEl.style.opacity = 1;
+                    }, 600);
 
+                }, 400);
 
-
-            console.log("videodata " + videodata + " was updated")
-
-            //Update the message
-            //            this.message = pathHeaders[pathID];
-            //            this.choiceList = pathAnswers[pathID];
-
-
-
-
+            } else {
+                $("#results").fadeIn();
+            }
         }
     }
-})
+});
 
 window.addEventListener("load", function (event) {
 
@@ -139,7 +157,10 @@ window.addEventListener("load", function (event) {
     var note = document.getElementById("notepad-overlay");
     var cname = document.getElementById("character-name");
 
+    var promptEl = document.getElementById("prompt");
 
+    $(".choice").css("opacity", 1);
+    promptEl.style.opacity = 1;
 
 
     //do work

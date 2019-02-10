@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Load Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 
     <!-- Import CSS -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -21,7 +21,7 @@
 
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    
+
     <!-- Load Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/custom.js"></script>
@@ -29,8 +29,8 @@
 
 <body>
     <div id="topbar"></div>
-    
-        <nav>
+
+    <nav>
         <ul>
             <a href="#">
                 <li>ABOUT</li>
@@ -74,22 +74,48 @@
     </div>
 
     <div id="app">
-        <div id="prompt-head">
-            <h1 id="prompt">{{prompt}}</h1>
-        </div>
+
         <div id="choice-container">
-            <choice-body v-for="item in choiceList2" v-bind:choice="item.option" v-bind:status="item.status" v-bind:link="item.link" v-bind:image="item.image" v-bind:ivideo="item.video" v-on:update-path="updateMe">
+            <h1 id="prompt">{{prompt}}</h1>
+
+            <choice-body v-for="item in choiceList2" v-bind:choice="item.option" v-bind:link="item.link" v-on:update-path="updateMe">
             </choice-body>
         </div>
+        <h2 id="progress">{{progress}}/10</h2>
+        <div id="results">
+            <div id="report-stream">
+                <h1>Your Sexual Guide</h1>
+
+<!--
+                <div class="report-box">
+                    <div class="report-head">
+                        <p>It's totally normal to feel nervous during your first time.</p>
+                    </div>
+                    <div class="report-body">
+                        <p>When you feel nervous, there are a few things that can happen to you that are also incredibly common. Even if this is your first time, or if you and your partner are just starting to have sex regularly, being intimate with someone else can be anxiety-inducing.
+                        </p>
+
+                        <p>
+                            People don’t like talking about the nitty-gritty of sex, but a lot of people experience:
+                        </p>
+                        <ul>
+                            <li>Being unable to get hard, or stay hard</li>
+                            <li>Premature ejaculation</li>
+                            <li> A loss in arousal</li>
+                        </ul>
+                        <p>
+                        The best thing to do is communicate with your partner. Assure them that it is not them, and shift your focus toward being intimate without the end goal. There’s other things you can do that are pleasurable, and more relaxed.
+                        </p>
+                    </div>
+                </div>
+-->
+                
+            </div>
+        </div>
     </div>
-    <!--    <feedback :class="feedbackStatus" v-html="feedbackMessage">{{feedbackMessage}}</feedback>-->
-
-
-
 </body>
-
-
-<script src="js/init.js"></script>
+<script src="js/init.js">
+</script>
 <script src="js/quiz.js"></script>
 
 

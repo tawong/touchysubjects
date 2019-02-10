@@ -8,29 +8,83 @@ body {
   width: 100%;
   text-align: center;
   height: 100%; }
-  #app #prompt-head {
-    margin-top: 35px;
-    height: 30%; }
-    #app #prompt-head #prompt {
-      width: 80%;
-      margin: auto;
-      text-align: center;
-      font-size: 26px; }
-  #app #choice-container {
-    width: 80%;
+  #app #prompt {
+    opacity: 0;
+    width: 70%;
     margin: auto;
-    text-align: left; }
+    margin-top: 25px;
+    text-align: left;
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 700;
+    color: #064ff5;
+    margin-bottom: 25px;
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    transition: opacity 0.4s; }
+  #app #progress {
+    color: #d6f440; }
+  #app #choice-container {
+    width: 70%;
+    margin: auto;
+    text-align: left;
+    height: 75vh;
+    margin-top: 50px;
+    border: 5px solid #064ff5; }
   #app .choice {
+    opacity: 0;
     padding: 15px 5px;
-    border: 3px solid #064ff5;
+    padding-left: 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     background: #064ff5;
     color: white;
+    font-size: 24px;
     font-weight: 600;
-    width: 65%;
-    margin: 8px auto;
+    width: 75%;
+    margin: 6px auto;
     cursor: pointer;
-    -webkit-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s; }
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s; }
+    #app .choice:hover {
+      background: #f45755; }
     #app .choice p {
       margin: 0; }
+  #app #results {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f4f3f2;
+    display: none; }
+    #app #results #report-stream {
+      width: 70%;
+      margin: auto;
+      text-align: left; }
+      #app #results #report-stream .report-head {
+        height: 60px;
+        width: 100%;
+        background: #064ff5; }
+        #app #results #report-stream .report-head p {
+          background: #064ff5;
+          line-height: 60px;
+          margin: 0;
+          padding-left: 20px;
+          color: white;
+          font-weight: 600; }
+      #app #results #report-stream .report-body {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 20px; }
+        #app #results #report-stream .report-body p, #app #results #report-stream .report-body li {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 22px; }
+      #app #results #report-stream .report-box {
+        border: 4px solid #064ff5; }
+    #app #results h1 {
+      color: #064ff5;
+      font-size: 5vw;
+      text-align: left; }
