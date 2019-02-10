@@ -79,7 +79,7 @@ var vm = new Vue({
             //DEBUG
             console.log("url: " + url);
 
-            if (pathID < 10) {
+            if (pathID <= 10) {
                 vm.progress = pathID;
 
                 window.setTimeout(function () {
