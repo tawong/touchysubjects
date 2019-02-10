@@ -12,16 +12,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Load Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+
 
     <!-- Import CSS -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/page.css">
 
-    <!-- development version, includes helpful console warnings -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    
     <!-- Load Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/custom.js"></script>
@@ -29,8 +27,8 @@
 
 <body>
     <div id="topbar"></div>
-    
-        <nav>
+
+    <nav>
         <ul>
             <a href="#">
                 <li>ABOUT</li>
@@ -73,17 +71,13 @@
         </ul>
     </div>
 
-    <div id="app">
-        <div id="prompt-head">
-            <h1 id="prompt">{{prompt}}</h1>
-        </div>
-        <div id="choice-container">
-            <choice-body v-for="item in choiceList2" v-bind:choice="item.option" v-bind:status="item.status" v-bind:link="item.link" v-bind:image="item.image" v-bind:ivideo="item.video" v-on:update-path="updateMe">
-            </choice-body>
-        </div>
+    <div id="quiz-start">
+        <h1>So you want<br>to start<br>having sex?</h1>
+        <p>The legal age of consent in Canada is 16 if your partner is within 5 years of age. After 18 you are free to engage in intimate activities with other consenting adults regardless of age. Do you completely understand the concept of consent?</p>
+        
+        <button class="theme-button">No</button>
+        <button class="theme-button">Yes</button>
     </div>
-    <!--    <feedback :class="feedbackStatus" v-html="feedbackMessage">{{feedbackMessage}}</feedback>-->
-
 
 
 </body>

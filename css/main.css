@@ -5,7 +5,7 @@ body {
   overflow-x: hidden; }
 
 html::-webkit-scrollbar-track {
-  background-color: #f25553; }
+  background-color: #f45755; }
 
 html::-webkit-scrollbar {
   width: 8px;
@@ -13,105 +13,7 @@ html::-webkit-scrollbar {
 
 html::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #888; }
-
-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  -webkit-transform-origin: left top;
-  -ms-transform-origin: left top;
-  transform-origin: left top;
-  -webkit-transform: rotate(-90deg) translateX(-100%);
-  -ms-transform: rotate(-90deg) translateX(-100%);
-  transform: rotate(-90deg) translateX(-100%);
-  z-index: 99; }
-  nav ul {
-    list-style: none;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 5px;
-    line-height: -60px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-weight: 600; }
-    nav ul a {
-      width: 60px;
-      height: 100%;
-      height: auto;
-      display: inline-block;
-      text-decoration: none;
-      color: #000;
-      padding: 15px 25px;
-      float: right;
-      text-align: center; }
-      nav ul a li {
-        width: 100%;
-        height: 100%; }
-        nav ul a li::after {
-          content: '';
-          display: block;
-          width: 0;
-          height: 2px;
-          background: #d6f440;
-          -webkit-transition: width .3s;
-          -o-transition: width .3s;
-          transition: width .3s; }
-        nav ul a li:hover::after {
-          width: 100%; }
-
-#corner-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 20px;
-  z-index: 99; }
-  #corner-menu ul {
-    list-style: none;
-    text-align: right;
-    color: black;
-    margin: 0; }
-    #corner-menu ul div.hidden {
-      height: 0;
-      overflow: hidden;
-      -webkit-transition: all 0.4s;
-      -o-transition: all 0.4s;
-      transition: all 0.4s; }
-      #corner-menu ul div.hidden.active {
-        height: 70px; }
-      #corner-menu ul div.hidden a {
-        font-size: 12px; }
-        #corner-menu ul div.hidden a li {
-          text-transform: lowercase;
-          line-height: 20px; }
-    #corner-menu ul a {
-      text-decoration: none;
-      color: black;
-      -webkit-transform: all 0.4s;
-      -ms-transform: all 0.4s;
-      transform: all 0.4s; }
-      #corner-menu ul a.dropdown {
-        cursor: pointer; }
-      #corner-menu ul a li {
-        list-style: none;
-        text-transform: uppercase;
-        font-weight: 600;
-        line-height: 28px;
-        letter-spacing: 0.08em; }
-      #corner-menu ul a::after {
-        content: '';
-        display: block;
-        width: 0;
-        height: 2px;
-        background: #d6f440;
-        -webkit-transition: width .3s;
-        -o-transition: width .3s;
-        transition: width .3s; }
-      #corner-menu ul a:hover::after {
-        width: 100%; }
+  background-color: #d2d2d2; }
 
 img.bg-deco {
   position: absolute;
@@ -256,7 +158,8 @@ img.bg-deco {
       line-height: 32px;
       padding-right: 50px;
       -webkit-box-sizing: border-box;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      margin-top: 25px; }
 
 @-webkit-keyframes float {
   0% {
